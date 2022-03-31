@@ -6,11 +6,11 @@
 /*   By: flcarval <flcarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 18:50:09 by flcarval          #+#    #+#             */
-/*   Updated: 2022/04/01 01:04:18 by flcarval         ###   ########.fr       */
+/*   Updated: 2022/04/01 01:22:27 by flcarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../include/ft_printf.h"
 
 int	ft_putstr(char *str)
 {
