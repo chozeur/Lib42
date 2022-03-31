@@ -6,20 +6,20 @@
 #    By: flcarval <flcarval@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/07 18:31:06 by flcarval          #+#    #+#              #
-#    Updated: 2022/04/01 01:07:11 by flcarval         ###   ########.fr        #
+#    Updated: 2022/04/01 01:14:34 by flcarval         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = lib42.a
-MANDATORY = $(addprefix ft_, atoi.c bzero.c calloc.c isalnum.c\
-			isalpha.c isascii.c isdigit.c isprint.c itoa.c memchr.c memcmp.c\
-			memcpy.c memmove.c memset.c putchar_fd.c putendl_fd.c putnbr_fd.c\
-			putstr_fd.c split.c strchr.c strdup.c striteri.c strjoin.c strlcat.c\
-			strlcpy.c strlen.c strmapi.c strncmp.c strnstr.c strrchr.c strtrim.c\
-			substr.c tolower.c toupper.c)
-BONUSES = $(addprefix ft_, lstadd_back.c lstadd_front.c lstclear.c\
+MANDATORY = $(addprefix src/ft_, atoi.c bzero.c calloc.c isalnum.c\
+isalpha.c isascii.c isdigit.c isprint.c itoa.c memchr.c memcmp.c\
+memcpy.c memmove.c memset.c putchar_fd.c putendl_fd.c putnbr_fd.c\
+putstr_fd.c split.c strchr.c strdup.c striteri.c strjoin.c strlcat.c\
+strlcpy.c strlen.c strmapi.c strncmp.c strnstr.c strrchr.c strtrim.c\
+substr.c tolower.c toupper.c)
+BONUSES = $(addprefix src/ft_, lstadd_back.c lstadd_front.c lstclear.c\
 lstdelone.c lstiter.c lstlast.c lstmap.c lstnew.c lstsize.c)
-FT_PRINTF = $(addprefix ft_, hexlen.c nblen.c printf.c printf_p.c printf_x.c putchar.c\
+FT_PRINTF = $(addprefix src/ft_, hexlen.c nblen.c printf.c printf_p.c printf_x.c putchar.c\
 putnbr.c putstr.c putui.c putulhex.c)
 GNL = $(get_next_line.c get_next_line_utils.c)
 OBJ_M = ${MANDATORY:.c=.o}
