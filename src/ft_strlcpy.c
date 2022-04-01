@@ -6,15 +6,15 @@
 /*   By: flcarval <flcarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 12:35:23 by flcarval          #+#    #+#             */
-/*   Updated: 2022/04/01 01:17:41 by flcarval         ###   ########.fr       */
+/*   Updated: 2022/04/01 01:34:42 by flcarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+int	ft_strlcpy(char *dst, char *src, int dstsize)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
 	if (dstsize > 0)

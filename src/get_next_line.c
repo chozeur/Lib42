@@ -6,11 +6,11 @@
 /*   By: flcarval <flcarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 15:00:41 by flcarval          #+#    #+#             */
-/*   Updated: 2022/01/11 06:13:07 by flo              ###   ########.fr       */
+/*   Updated: 2022/04/01 19:22:44 by flcarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../include/get_next_line.h"
 
 char	*ft_read(int fd, char *stat)
 {
@@ -41,10 +41,10 @@ char	*parse_line(char *str)
 	char	*res;
 	int		i;
 
-	i = 0;
-	if (str[i] == '\0')
+	i = -1;
+	if (str[0] == '\0')
 		return (NULL);
-	while (str[i++])
+	while (str[++i])
 		if (str[i++] == '\n')
 			break ;
 	res = malloc(sizeof(char) * (i + 1));
@@ -53,7 +53,7 @@ char	*parse_line(char *str)
 	i = -1;
 	while (str[++i])
 	{
-		if (str[i] == '\n')
+		if (str[i] && str[i] == '\n')
 		{
 			res[i] = str[i];
 			i++;
@@ -93,15 +93,22 @@ char	*clear_stat(char *stat)
 
 char	*get_next_line(int fd)
 {
-	static char	*stat;
+	static char	*stat = NULL;
+	static int	end = 0;
 	char		*res;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
+	{
+		if (stat)
+			free(stat);
 		return (NULL);
+	}
 	stat = ft_read(fd, stat);
 	if (!stat)
 		return (NULL);
 	res = parse_line(stat);
 	stat = clear_stat(stat);
+	if (end)
+		free(stat);
 	return (res);
 }

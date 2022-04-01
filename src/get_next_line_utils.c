@@ -6,11 +6,11 @@
 /*   By: flcarval <flcarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 17:30:30 by flcarval          #+#    #+#             */
-/*   Updated: 2022/01/11 06:14:00 by flo              ###   ########.fr       */
+/*   Updated: 2022/04/01 19:19:26 by flcarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../include/get_next_line.h"
 
 int	ft_strlen(char *str)
 {

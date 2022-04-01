@@ -6,7 +6,7 @@
 /*   By: flcarval <flcarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 17:30:36 by flcarval          #+#    #+#             */
-/*   Updated: 2022/04/01 01:22:27 by flcarval         ###   ########.fr       */
+/*   Updated: 2022/04/01 01:34:42 by flcarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static int	ft_printf_all(va_list ap, char c)
 		return (-1);
 }
 
-int	ft_printf(const char *input, ...)
+int	ft_printf(char *input, ...)
 {
 	int		i;
 	va_list	ap;

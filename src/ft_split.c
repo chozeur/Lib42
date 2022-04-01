@@ -6,13 +6,13 @@
 /*   By: flcarval <flcarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 17:54:30 by flcarval          #+#    #+#             */
-/*   Updated: 2022/04/01 01:17:41 by flcarval         ###   ########.fr       */
+/*   Updated: 2022/04/01 01:35:22 by flcarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
 
-static int	word_len(char const *s, char c)
+static int	word_len(char *s, char c)
 {
 	int		i;
 
@@ -22,7 +22,7 @@ static int	word_len(char const *s, char c)
 	return (i);
 }
 
-static char	*strdup_custom(char const *s, char c)
+static char	*strdup_custom(char *s, char c)
 {
 	char	*res;
 	int		j;
@@ -53,7 +53,7 @@ static void	free_all(char **res)
 	free(res);
 }
 
-static void	split_supply(char **res, char const *s, char c, int wds)
+static void	split_supply(char **res, char *s, char c, int wds)
 {
 	int	i;
 	int	j;
@@ -81,7 +81,7 @@ static void	split_supply(char **res, char const *s, char c, int wds)
 	res[j] = NULL;
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(char *s, char c)
 {
 	char	**res;
 	int		wds;

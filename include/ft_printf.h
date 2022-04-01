@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flcarval <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: flcarval <flcarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 17:33:00 by flcarval          #+#    #+#             */
-/*   Updated: 2021/12/15 18:17:42 by flcarval         ###   ########.fr       */
+/*   Updated: 2022/04/01 01:34:42 by flcarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stdarg.h>
 # include <unistd.h>
 
-int	ft_printf(const char *input, ...);
+int	ft_printf(char *input, ...);
 int	ft_printf_p(void *ptr);
 int	ft_printf_x(unsigned int nb, int caps);
 int	ft_nblen(long int nb);

@@ -6,7 +6,7 @@
 #    By: flcarval <flcarval@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/07 18:31:06 by flcarval          #+#    #+#              #
-#    Updated: 2022/04/01 01:14:34 by flcarval         ###   ########.fr        #
+#    Updated: 2022/04/01 01:43:21 by flcarval         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ BONUSES = $(addprefix src/ft_, lstadd_back.c lstadd_front.c lstclear.c\
 lstdelone.c lstiter.c lstlast.c lstmap.c lstnew.c lstsize.c)
 FT_PRINTF = $(addprefix src/ft_, hexlen.c nblen.c printf.c printf_p.c printf_x.c putchar.c\
 putnbr.c putstr.c putui.c putulhex.c)
-GNL = $(get_next_line.c get_next_line_utils.c)
+GNL = $(addprefix src/get_next_, line.c line_utils.c)
 OBJ_M = ${MANDATORY:.c=.o}
 OBJ_B = ${BONUSES:.c=.o}
 OBJS_FT = ${FT_PRINTF:.c=.o}
@@ -46,5 +46,5 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re
 

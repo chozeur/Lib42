@@ -6,16 +6,16 @@
 /*   By: flcarval <flcarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 12:35:50 by flcarval          #+#    #+#             */
-/*   Updated: 2022/04/01 01:17:41 by flcarval         ###   ########.fr       */
+/*   Updated: 2022/04/01 01:34:42 by flcarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(char *big, char *little, int len)
 {
-	size_t	i;
-	size_t	j;
+	int	i;
+	int	j;
 
 	if (little[0] == '\0')
 		return ((char *)big);

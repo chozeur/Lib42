@@ -6,13 +6,13 @@
 /*   By: flcarval <flcarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 14:57:22 by flcarval          #+#    #+#             */
-/*   Updated: 2022/04/01 01:17:41 by flcarval         ###   ########.fr       */
+/*   Updated: 2022/04/01 19:33:53 by flcarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
 
-static int	isset(char c, char const *set)
+static int	isset(char c, char *set)
 {
 	int	i;
 
@@ -26,12 +26,12 @@ static int	isset(char c, char const *set)
 	return (0);
 }
 
-static size_t	ft_trimlen(char const *str, char const *set)
+static int	ft_trimlen(char *str, char *set)
 {
-	size_t	i;
-	size_t	j;
-	size_t	k;
-	size_t	len;
+	int	i;
+	int	j;
+	int	k;
+	int	len;
 
 	i = 0;
 	j = 0;
@@ -51,12 +51,12 @@ static size_t	ft_trimlen(char const *str, char const *set)
 	return (len);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char *s1, char *set)
 {
 	char	*res;
-	size_t	trimlen;
-	size_t	i;
-	size_t	j;
+	int		trimlen;
+	int		i;
+	int		j;
 
 	if (!s1 || !set)
 		return (NULL);

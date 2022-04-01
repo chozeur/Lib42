@@ -6,7 +6,7 @@
 /*   By: flcarval <flcarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 14:54:47 by flcarval          #+#    #+#             */
-/*   Updated: 2022/04/01 01:06:04 by flcarval         ###   ########.fr       */
+/*   Updated: 2022/04/01 19:21:30 by flcarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-# define BUFFER_SIZE 42
+# define BUFFER_SIZE 4096
 
 //	get_next_line.c
 

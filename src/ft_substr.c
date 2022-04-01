@@ -6,15 +6,15 @@
 /*   By: flcarval <flcarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 16:54:42 by flcarval          #+#    #+#             */
-/*   Updated: 2022/04/01 01:17:41 by flcarval         ###   ########.fr       */
+/*   Updated: 2022/04/01 19:34:21 by flcarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
 
-static size_t	ft_strnlen(char const *s, size_t max)
+static int	ft_strnlen(char *s, int max)
 {
-	size_t	res;
+	int	res;
 
 	res = 0;
 	while (s[res] && res < max)
@@ -22,14 +22,14 @@ static size_t	ft_strnlen(char const *s, size_t max)
 	return (res);
 }
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char *s, unsigned int start, int len)
 {
 	char	*res;
-	size_t	i;
+	int		i;
 
 	if (!s)
 		return (NULL);
-	if (start >= ft_strlen(s))
+	if (start >= (unsigned int)ft_strlen(s))
 	{
 		res = ft_strdup("\0");
 		return (res);
