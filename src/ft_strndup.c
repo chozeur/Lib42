@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lib42.h                                            :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flcarval <flcarval@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/01 01:18:23 by flcarval          #+#    #+#             */
-/*   Updated: 2022/04/26 16:18:19 by flcarval         ###   ########.fr       */
+/*   Created: 2022/04/26 16:16:25 by flcarval          #+#    #+#             */
+/*   Updated: 2022/04/26 16:20:03 by flcarval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIB42_H
-# define LIB42_H
+#include "../include/libft.h"
 
-# include <fcntl.h>
-# include "libft.h"
-# include "get_next_line.h"
-# include "ft_printf.h"
+char	*ft_strndup(char *str, int n)
+{
+	int		i;
+	char	*res;
 
-char	*ft_strndup(char *str, int n);
-
-#endif
+	i = 0;
+	res = malloc(sizeof(char) * (n + 1));
+	if (!res)
+		return (NULL);
+	while (str[i] && i < n)
+	{
+		res[i] = str[i];
+		i++;
+	}
+	return (res);
+}
