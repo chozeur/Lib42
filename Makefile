@@ -21,7 +21,7 @@ BONUSES = $(addprefix src/ft_, lstadd_back.c lstadd_front.c lstclear.c\
 lstdelone.c lstiter.c lstlast.c lstmap.c lstnew.c lstsize.c)
 FT_PRINTF = $(addprefix src/ft_, hexlen.c nblen.c printf.c printf_p.c printf_x.c putchar.c\
 putnbr.c putstr.c putui.c putulhex.c)
-GNL = $(addprefix src/get_next_, line.c line_utils.c)
+GNL = $(addprefix src/get_next_, line.c)
 OBJ_M = ${MANDATORY:.c=.o}
 OBJ_B = ${BONUSES:.c=.o}
 OBJS_FT = ${FT_PRINTF:.c=.o}
